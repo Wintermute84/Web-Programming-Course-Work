@@ -1,0 +1,236 @@
+*{
+  font-family: 'Poppins';
+}
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.circle{
+  width: 20px;
+  height: 20px;
+  background-color: #F14B4B;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.sm-square{
+  width: 5px;
+  height: 5px;
+  background-color: #EF6464;
+  position: absolute;
+  top: 8px;
+  right: -26px;
+}
+
+.lg-square{
+  width: 10px;
+  height: 10px;
+  background-color: #F03E3E;
+  position: absolute;
+  bottom: 9px;
+  right: -28px;
+}
+
+header{
+  display: flex;
+  height: 70px;
+  border-bottom: 2px solid black;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  position: sticky;
+}
+
+.banner-container{
+  font-family: "Jacquard 12";
+  display: flex;
+  gap: 33px;
+  font-size: 2.2rem;
+  margin-left: 10px;
+}
+
+.banner{
+  position: relative;
+}
+
+.header-buttons{
+  margin-right: 20px;
+  display: flex;
+  width: 20%;
+  gap: 12px;
+  justify-content: end;
+}
+
+.header-buttons > a{
+  all: unset;
+  border: 1px solid black;
+  height: 30px;
+  min-width: 75px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-buttons > a:hover{
+  background-color: #EF6464;
+  color: white;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+  gap: 10%;
+}
+
+section{
+  width: 500px;
+  height: 442px;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.icon-container{
+  height: 150px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.icon-container > img{
+  height: 80px;
+}
+
+p{
+  margin: 0;
+}
+
+.icons-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.headings-div{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headings-div > p{
+  margin-left: 18px;
+  font-size: 4.2rem;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.login-div{
+  margin-left: 20px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-text{
+  font-size: 2.6rem;
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+  color: #4D4949;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.login-div > label > input{
+  padding-left: 14px;
+  width: 94%;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.login-div > button{
+  all: unset;
+  color: white;
+  background-color: black;
+  width: 98%;
+  height: 50px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.login-div > button:hover{
+  opacity: 0.8;
+}
+
+.user-buttons{
+  margin-right: 20px;
+  display: flex;
+  width: 40%;
+  gap: 12px;
+  justify-content: end;
+  align-items: center;
+}
+
+.user-buttons > a{
+  all: unset;
+  border: 1px solid black;
+  height: 30px;
+  min-width: 100px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px 0 5px;
+}
+
+
+.user-buttons > a:hover{
+  background-color: #EF6464;
+  color: white;
+}
+
+.user-dropdown-button{
+  width: 20px;
+  height: 20px;
+  background-color: #F03E3E;
+  border-radius: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+}
+
+
+@media(width < 700px){
+  main{
+    flex-direction: column;
+  }
+
+  section{
+   margin: 5px 0 5px 0;
+   width: 90%;
+  }
+}
+
