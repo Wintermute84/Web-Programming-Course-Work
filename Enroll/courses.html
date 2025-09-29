@@ -21,34 +21,429 @@
       </div>
       <div class="user-buttons">
         <a href="./index.html">My Courses</a>
-        <div class="user-dropdown-button"></div>
+        <div x-data="{ open: false }" class="user-div">
+          <div @click="open = !open" class="user-dropdown-button"></div>
+          <div 
+            x-show="open"
+            @click.outside="open = false" 
+            x-transition
+            x-on:click.outside="open = false"
+            class="user-dropdown"
+            :class="open ? 'open' : 'closing'"
+            >
+            <div class="dropdown-item">
+              <img src="./assets/user.png" alt="user icon">
+              <p>Luigi123</p>
+            </div>
+            <div class="dropdown-item">
+              <img src="./assets/logout.png" alt="logout icon">
+              <p>Logout</p>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
-    <main>
-      <section class="icons-section">
-        <div class="icon-container">
-          <img src="assets/Achievement.png" alt="Achievement Icon">
-          <img src="assets/Globe.png" alt="Globe Icon">
-          <img src="assets/Student.png" alt="Student Icon">
+    <main class="course-main">
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
         </div>
-        <div class="headings-div">
-          <p>Discover. Explore. Learn.</p>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
         </div>
-      </section>
-      <section class="login-section">
-        <form class="login-div">
-          <p class="login-text">Sign Up.</p>
-          <label for="emailId">
-            Email
-            <input type="email" name="email-input" id="emailId" required placeholder="johndoe35@gmail.com" >
-          </label>
-          <label for="userName">
-            Username
-            <input type="text" name="user-name" id="userName" required placeholder="John Doe" >
-          </label>
-          <button type="submit">Sign Up</button>
-        </form>
-      </section>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div><div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
+      <div class="course-div">
+        <div class="course-details-div">
+          <div class="course-name-div">
+            <img src="./assets/dbms.png" alt="dbms icon">
+            <p>Database Management Systems</p>
+          </div>
+          <div class="course-info">
+            <div class="course-duration">
+              <p>6 Months</p>
+            </div>
+            <div class="seats-remaining">
+              <p>97 Seats Left</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-blurb">
+          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
+        </div>
+        <button class="enroll-button">Enroll</button>
+      </div>
     </main>
+    <script type="module" src="./scripts/app.js"></script>
   </body>
 </html>

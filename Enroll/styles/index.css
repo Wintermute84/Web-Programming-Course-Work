@@ -219,9 +219,154 @@ label{
   border-radius: 100%;
   border: 1px solid black;
   cursor: pointer;
-  position: relative;
 }
 
+.user-div{
+  position: relative;
+  display: inline-block;
+}
+
+.user-dropdown{
+  position: absolute;
+  width: 180px;
+  height: fit-content;
+  background-color: #ffffff;
+  right: 0;
+  margin-top: 2px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px;
+  gap: 10px;
+}
+
+.user-dropdown {
+  transform-origin: top right; 
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none; 
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.user-dropdown.open {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.user-dropdown.closing {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.15s ease-in, transform 0.15s ease-in;
+}
+
+.dropdown-item{
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+  transition: all ease-in-out 0.2s;
+}
+
+.dropdown-item:hover{
+  background-color: #cac2c2;
+  color: white;
+}
+
+.course-main{
+  align-items: normal;
+  justify-content: space-evenly;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.course-div{
+  width: 340px;
+  height: fit-content;
+  background-color: #ffffff;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-details-div{
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid black;
+}
+
+.course-name-div{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 10px;
+}
+
+.course-name-div > img{
+  height: 24px;
+}
+
+.course-info{
+  display: flex;
+  width: 100%;
+}
+
+.course-info > div{
+  width: fit-content;
+  height: 20px;
+  border: 1px solid black;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  border-radius: 2px;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.course-info > div > p{
+  font-size: 0.8rem;
+}
+
+.course-info > div:hover{
+  background-color: #F03E3E;
+  color: white;
+}
+
+.course-blurb{
+  padding: 4px;
+  margin-left: -10px;
+  width: 90%;
+}
+
+.course-blurb > p{
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+.enroll-button{
+  all: unset;
+  width: 90%;
+  background-color: #000000;
+  color: white;
+  height: 40px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  transition: all ease-in-out 0.2s;
+}
+
+.enroll-button:hover{
+  opacity: 0.8;
+}
 
 @media(width < 700px){
   main{
