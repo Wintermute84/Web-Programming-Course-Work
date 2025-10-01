@@ -277,10 +277,10 @@ label{
   color: white;
 }
 
-.course-main{
+.course-main,.my-course-main{
   align-items: normal;
-  justify-content: space-between;
-  gap: 0;
+  justify-content: start;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -360,7 +360,7 @@ label{
   text-align: justify;
 }
 
-.enroll-button{
+.enroll-button,.disenroll-button{
   all: unset;
   position: absolute;
   bottom: 0;
@@ -376,7 +376,7 @@ label{
   transition: all ease-in-out 0.2s;
 }
 
-.enroll-button:hover{
+.enroll-button:hover,.disenroll-button:hover{
   opacity: 0.8;
 }
 
@@ -397,6 +397,10 @@ label{
   section{
    margin: 5px 0 5px 0;
    width: 90%;
+  }
+
+  .course-main,.my-course-main{
+    align-items: center;
   }
 }
 

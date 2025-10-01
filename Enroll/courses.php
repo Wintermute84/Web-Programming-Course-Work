@@ -28,7 +28,7 @@
         Enroll
       </div>
       <div class="user-buttons">
-        <a href="./mycourses.html">My Courses</a>
+        <a href="./mycourses.php">My Courses</a>
         <div x-data="{ open: false }" class="user-div">
           <div @click="open = !open" class="user-dropdown-button"></div>
           <div 

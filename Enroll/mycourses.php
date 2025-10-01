@@ -1,3 +1,11 @@
+<?php
+  include "config.php";
+  if (!isset($_SESSION['sid'])) {
+    header("Location: signup.php");
+    exit();
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,7 +28,7 @@
         Enroll
       </div>
       <div class="user-buttons">
-        <a href="./courses.html">Courses</a>
+        <a href="./courses.php">Courses</a>
         <div x-data="{ open: false }" class="user-div">
           <div @click="open = !open" class="user-dropdown-button"></div>
           <div 
@@ -33,29 +41,18 @@
             >
             <div class="dropdown-item">
               <img src="./assets/user.png" alt="user icon">
-              <p>Luigi123</p>
+              <p><?php echo htmlspecialchars($_SESSION['sname']);?></p>
             </div>
             <div class="dropdown-item">
               <img src="./assets/logout.png" alt="logout icon">
-              <p>Logout</p>
+              <a href="logout.php" style="all:unset; width:100%;">Logout</a>            
             </div>
           </div>
         </div>
       </div>
     </header>
-    <main class="course-main">
-      <div class="course-div">
-        <div class="my-course-details-div">
-          <div class="course-name-div">
-            <img src="./assets/dbms.png" alt="dbms icon">
-            <p>Database Management Systems</p>
-          </div>
-        </div>
-        <div class="course-blurb">
-          <p>Learn how modern applications store, organize, and manage data. This course covers the essentials of relational databases, SQL, and design principles, giving you the skills to build and query databases for real-world use.</p>
-        </div>
-        <button class="enroll-button">Disenrol</button>
-      </div>
+    <main class="my-course-main">
+      
     </main>
     <script type="module" src="./scripts/app.js"></script>
   </body>
